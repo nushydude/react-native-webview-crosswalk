@@ -16,19 +16,16 @@ public class CrosswalkWebViewPackage implements ReactPackage {
     public CrosswalkWebViewPackage () {
     }
 
-    @Override
     public List<NativeModule> createNativeModules (ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
         modules.add(new CrosswalkWebViewManager(reactContext));
         return modules;
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules () {
         return Collections.emptyList();
     }
 
-    @Override
     public List<ViewManager> createViewManagers (ReactApplicationContext reactContext) {
         return Arrays.<ViewManager>asList(new CrosswalkWebViewGroupManager(reactContext));
     }
